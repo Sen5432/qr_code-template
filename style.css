@@ -1,68 +1,56 @@
+/* Variables and Base Styles */
 :root {
-
-    --White: hsl(0, 0%, 100%);
-    --Light-gray: hsl(212, 45%, 89%);
-    --Grayish-blue: hsl(220, 15%, 55%);
-    --Dark-blue: hsl(218, 44%, 22%);
-
-    --ff: 'Outfit', sans-serif;
-
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+  --ff: 'Outfit', sans-serif;
 }
 
-
-
-
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/*
-    2. Remove default margin
-  */
-* {
-    margin: 0;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
 }
 
-/*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff);
+  color: var(--Grayish-blue);
+  background-color: var(--Light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
-/*
-    5. Improve media defaults
-  */
 img,
 picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-/*
-    6. Remove built-in form typography styles
-  */
 input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
-/*
-    7. Avoid text overflows
-  */
 p,
 h1,
 h2,
@@ -70,69 +58,38 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/*
-    8. Create a root stacking context
-  */
-#root,
-#__next {
-    isolation: isolate;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    padding-top: 10rem;
-    padding-bottom: 3rem;
-    align-items: center;
-    flex-direction: column;
-    font-family: var(--ff);
-    background-color: var(--Light-gray);
-    color: var(--Grayish-blue);
-
-
-
-}
-
+/* Layout and Components */
 .card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--White);
-    padding: 1rem;
-
-    border-radius: 1rem;
-
-    width: 200px;
-
-    gap: 1rem;
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 200px;
+  gap: 1rem;
 }
 
 .img_qr {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-
 .second {
-    background-color: var(--White);
-    text-align: center;
-    border-radius: 0.5rem;
-
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .heading {
-    font-size: 1rem;
-    font-weight: 700;
-    color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Dark-blue);
 }
 
 .para {
-    font-size: 0.3;
-    font-weight: 400;
-    text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
